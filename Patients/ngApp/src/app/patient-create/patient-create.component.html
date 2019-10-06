@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+        <form (submit)="addPatient(PatientForm)" #PatientForm="ngForm">
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              name="name"
+              [ngModel]="patient?.name"
+              required
+              minlength="3"
+              placeholder="Patient Name"
+              #name="ngModel">
+            <mat-error *ngIf="name.invalid">Please enter a Patient Name.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              name="description"
+              [ngModel]="patient?.description"
+              required
+              placeholder="Description"
+              #description="ngModel">
+            <mat-error *ngIf="description.invalid">Please enter a Describtion.</mat-error>
+          </mat-form-field>
+          <button
+            mat-raised-button
+            color="accent"
+            type="submit">Save</button>
+        </form>
+      </mat-card>
+      

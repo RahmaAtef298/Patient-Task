@@ -1,0 +1,27 @@
+:host {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  mat-expansion-panel{
+      width: 50%;
+      margin: auto;
+  }
+  .example-form{
+      text-align: center;
+      size: 60px;
+  }
+
+  .info-text {
+    text-align: center;
+  }
+
+  input{
+    color: rgb(24, 23, 23);
+    size: 60px;
+  }
+
+  body{
+      background-color: rgb(153, 152, 152);
+  }
+  

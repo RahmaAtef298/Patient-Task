@@ -1,0 +1,21 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<form (click)="searchPatient(PatientForm)" class="example-form" #PatientForm="ngForm">
+        <mat-form-field  appearance="outline" class="example-full-width">
+          <input matInput type="text" ngModel maxlength="14" name="name" placeholder="Search" required>
+        </mat-form-field>
+</form>
+
+<mat-accordion  multi="true" *ngIf="patients.length > 0 && !isLoading">
+  <mat-expansion-panel *ngFor="let patient of patients">
+    <mat-expansion-panel-header>
+      {{patient.name}}
+    </mat-expansion-panel-header>
+    <p>{{patient.description}}</p>
+    <mat-action-row>
+      <a mat-button color="primary" [routerLink]="['/edit', patient.id]">Edit</a>
+      <button mat-button color="warn"  (click)="deletePatient(patient.id)">Delete</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="patients.length <= 0 && !isLoading">No Patients</p>

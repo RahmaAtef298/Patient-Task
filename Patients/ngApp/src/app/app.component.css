@@ -1,0 +1,64 @@
+.menu {
+    background: #800040;
+  }
+  
+  .menu--row {
+    width: 90%;
+    font-size: 0;
+  }
+  
+  .menu--list {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 20px;
+  }
+  
+  .menu--link {
+    display: block;
+    text-decoration: none;
+    padding: 25px;
+    color: white;
+    font-weight: 500;
+    -webkit-transition: .3s;
+            transition: .3s;
+  }
+  @media (max-width: 30em) {
+    .menu--link {
+      padding: 10px 10px;
+    }
+  }
+  .menu--link:hover {
+    background: #cc0066;
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Raleway";
+  }
+  
+  .cf:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  h2 {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 2vh;
+  }
+  
+  p {
+    line-height: 1.5;
+    color: #fafafa;
+    font-weight: 500;
+  }
+  
